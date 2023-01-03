@@ -1,0 +1,1899 @@
+/*-------------------------------------------------MẶC ĐỊNH-------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;;
+}
+
+/*-------------------------------------------------MẶC ĐỊNH-------------------------------------------------*/
+
+/*-------------------------------------------------THONG BAO DA LAM GI-------------------------------------------------*/
+
+.notifly{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    justify-content:center;
+    align-items:center;
+    display: none;
+}
+.custom-alert{
+    width: 250px;
+    height: 150px;
+    border: 4px solid #005baa;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.alert-dathang{
+    width: 300px;
+    height: 200px;
+}
+.alert-cart{
+    width: 300px;
+    height: 200px;
+}
+.fa-check-circle{
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: #005baa;
+    font-weight: 800;
+    border-radius: 100px;
+}
+.ti-info {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: #005baa;
+    font-weight: 800;
+    border-radius: 100px;
+}
+.custom-alert p{
+    padding: 10px 0;
+    font-size: 18px;
+    text-align: center;
+}
+.custom-alert button{
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #005baa;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+}
+.custom-alert button:hover{
+    background-color: #45aaf2;
+    padding:7px 13px;
+}
+.custom-alert a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    margin-bottom: 10px !important;
+    border: 1px solid silver;
+    background-color:#005baa;
+    outline:none;
+    border-radius: 10px;
+}
+.custom-alert a:hover{
+    background-color: #45aaf2;
+    padding: 8px 13px;
+}
+
+/*-------------------------------------------------THONG BAO DA LAM GI-------------------------------------------------*/
+
+/*-------------------------------------------------CSS - HEADER - MENU-------------------------------------------------*/
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 140px;
+    align-items: center;
+    background-color: #005baa;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    background-image: url(./images/durex_logo.png);
+    flex: 1;
+    height: 132px;
+    background-size: cover;
+    margin-left: 1px;
+    cursor: pointer;
+}
+
+.menu {
+    flex: 2;
+    display: flex;
+}
+
+.menu > li {
+    padding-left: 45px;
+    position: relative;
+}
+
+.menu > li > a {
+    position: relative;
+}
+
+.menu > li > a::after {
+    content:"";
+    height: 2px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu > li > a:hover::after{
+    width: 50%;
+    transform: translateX(100%)
+}
+
+.menu > li > a:hover {
+    color: #45aaf2;
+} 
+
+.menu > li:hover .sub-menu {
+    visibility: visible;
+    top: 27px;
+}
+
+.sub-menu {
+    position: absolute;
+    width: 190px;
+    border: 1px solid #ffffff;
+    padding: 10px 0px 10px  20px;
+    background-color: #005baa;
+    border-radius: 20px;
+    visibility: hidden;
+    top: 70px;
+    right: -45px;
+    transition: 0.3s;
+}
+
+.sub-menu li a {
+    font-weight: normal;
+    line-height: 50px;
+    color: #ffffff;
+    position: relative;
+}
+
+.sub-menu li a:hover {
+    color: #45aaf2;
+}
+
+.sub-menu > li > a::after {
+    content:"";
+    height: 2px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: all 0.5s linear;
+}
+
+.sub-menu > li > a:hover::after{
+    width: 100%;
+}
+
+.menu > li > a {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+}
+
+.others {
+    flex: 1;
+    display: flex;
+}
+
+.others > li {
+    padding: 0px 0px;
+}
+
+.others > li:first-child {
+    position: relative;
+}
+
+.others > li:first-child input {
+    width: 284px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    padding: 0px 16px;
+    outline: none;
+    /* margin-top: 6px; */
+}
+
+.others > li:first-child i {
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    color: #005baa;
+}
+
+.others > li:first-child i:hover {
+    color: #45aaf2;
+}
+
+.others > li:last-child a {
+    position: absolute;
+    right: 60px;
+    top: 50px;
+    font-size: 244%;
+}
+
+.others > li:last-child a:hover {
+    color: #45aaf2;
+}
+
+/*-------------------------------------------------CSS - HEADER - MENU-------------------------------------------------*/
+
+/*-------------------------------------------------CSS - SLIDER-------------------------------------------------*/
+
+.slider {
+    background-color: #005baa;
+    width: 100%;
+    height: 613px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 506%;
+    height: 613px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 613px;
+}
+
+/* CSS CHO MANUAL SLIDE NAVIGATION */
+
+.navigation-manual {
+    position: absolute;
+    width: 1519px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #45aaf2;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: #005baa;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+    margin-left: -80%;
+}
+
+/* CSS CHO MANUAL SLIDE NAVIGATION */
+
+/* CSS CHO AUTOMATIC NAVIGATION */
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 1519px;
+    justify-content: center;
+    margin-top: 573px;
+}
+
+.navigation-auto div {
+    border: 2px solid #005baa;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: #005baa;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: #005baa;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #005baa;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: #005baa;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+    background-color: #005baa;
+}
+
+/* CSS CHO AUTOMATIC NAVIGATION */
+
+/*-------------------------------------------------CSS - SLIDER-------------------------------------------------*/
+
+/*-------------------------------------------------ABOUT-------------------------------------------------*/
+
+.app-container {
+    text-align: center;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #005baa;
+}
+
+.app-google {
+    margin: 50px;
+}
+
+.app-google img {
+    height: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.app-container p {
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.app-container p:hover { color:#ffffff;}
+
+.app-container input {
+    margin-top: 35px;
+    border: none; 
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 20px;
+    width: 400px;
+    text-align: center;
+    outline: none;
+    background-color: #005baa;
+    color: #ffffff;
+}
+
+/*-------------------------------------------------ABOUT-------------------------------------------------*/
+
+/*-------------------------------------------------FOOTER-------------------------------------------------*/
+
+.footer-top {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #005baa;
+}
+
+.footer-top img {
+    height: 50px;
+    border-radius: 10px;
+}
+
+.footer-top li {
+    padding: 0 12px;
+    position: relative;
+}
+
+.footer-top > li > a {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+} 
+
+.footer-top > li > a:hover {
+    color: #45aaf2;
+}
+
+.fa-facebook:hover {
+    transition: 2s;
+    background-color: #45aaf2;
+}
+
+.fa-instagram:hover {
+    transition: 2s;
+    background-color: #fcaf45;
+}
+
+.fa-youtube:hover {
+    transition: 2s;
+    background-color: #c4302b;
+}
+
+.footer-top li::after{
+    content:"";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #ffffff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer-top li:last-child::after{
+    display: none;
+}
+
+.footer-top li:last-child a {
+    margin-left: 12px;
+    border-radius: 50%;
+}
+
+.footer-top > li > a::after {
+    content:"";
+    height: 2px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.footer-top li:first-child a:hover::after {
+    width: 0%;
+}
+
+.footer-top > li > a:hover::after {
+    width: 100%;
+}
+
+.footer-top li:last-child a:hover::after {
+    width: 0%;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin: -20px 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #005baa;
+    padding: 30px 0px 10px 0px;
+}
+
+/*-------------------------------------------------FOOTER-------------------------------------------------*/
+
+/*-------------------------------------------------DANH MUC SAN PHAM-------------------------------------------------*/
+
+.cartegory {
+    padding: 0px 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.cartegory-top {
+    padding: 20px 50px;
+}
+
+.cartegory-top a, span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cartegory-top a:first-child {
+    color: black;
+}
+
+.cartegory-top a:last-child, span{
+    color: #005baa;
+}
+
+.cartegory-top a:first-child:hover {
+    color: #005baa;
+}
+
+.cartegory-top a:last-child:hover {
+    color: #45aaf2;
+}
+
+.cartegory-title {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.cartegory-title {
+    width: 100%;
+}
+
+.cartegory-title h1 {
+    font-size: 40px;
+    color: #005baa;
+}
+
+.cartegory-title-description > p {
+    padding: 25px 196px;
+    color: #005baa;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+
+.cartegory-title-description > p:hover {
+    color: #005baa;
+}
+
+.cartegory-bottom-a {
+    width: 100%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.cartegory-bottom-item {
+    width: 25%;
+    text-align: center;
+    padding: 20px 50px;
+    font-weight: 100;
+    /* background-color: #fcaf45; */
+}
+
+.cartegory-bottom-item h1, p {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 0 9px;
+    color: #005baa;
+    cursor: pointer;
+}
+
+.cartegory-bottom-item h1:hover {
+    color: #45aaf2;
+}
+
+.cartegory-bottom-item p:hover {
+    color: #005baa;
+}
+
+.cartegory-bottom-item img {
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border: 0px solid #45aaf2;
+    border-radius: 30px;
+}
+
+.cartegory-bottom-item img:hover {
+    border: 2px solid #45aaf2;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+/*-------------------------------------------------DANH MUC SAN PHAM-------------------------------------------------*/
+
+/*-------------------------------------------------SAN PHAM-------------------------------------------------*/
+
+.product {
+    width: 100%;
+    height: 100%;
+    /* background-color: tomato; */
+}
+
+.product-top {
+    padding: 20px 50px;
+}
+
+.product-top a, span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-top a:first-child {
+    color: black;
+}
+
+.product-top a:last-child, span{
+    color: #005baa;
+}
+
+.product-top a:first-child:hover {
+    color: #005baa;
+}
+
+.product-top a:last-child:hover{
+    color: #45aaf2;
+}
+
+.product-content {
+    display: flex;
+}
+
+.product-content-left {
+    width: 50%;
+    /* background-color: aqua; */
+    display: flex;
+}
+
+.product-content-left-big-img {
+    width: 80%;
+    padding-right: 20px;
+}
+
+.product-content-left-big-img img {
+    width: 100%;
+}
+
+.product-content-left-small-img {
+    width: 20%;
+}
+
+.product-content-left-small-img img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.product-content-right {
+    width: 50%;
+    /* background-color: blueviolet; */
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+.product-content-right-product-name h1 {
+    font-size: 35px;
+    color: #005baa;
+} 
+
+.product-content-right-product-price {
+    margin: 12px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-content-right-product-price p {
+    font-size: 30px;
+    text-align: left;
+}
+
+.product-content-right-product-size p {
+    text-align: left;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.size span {
+    display: inline-block;
+    padding: 4px 20px;
+    border: 1px solid #005baa;
+    margin: 0px 10px 12px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #005baa;
+}
+
+.size span:hover {
+    background-color: #005baa;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.quantity {
+    display: flex;
+    margin-top: 10px;
+}
+
+.quantity p {
+    text-align: left;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.quantity input {
+    width: 62px;
+    padding: 6px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid #005baa;
+    color: #005baa
+}
+.slhienco {
+    text-align: center;
+    font-style: italic;
+    color: #005baa;
+    font-size: 20px;
+    margin: 0px 0px 0px 10px;
+}
+
+.slhienco:hover {
+    color: #45aaf2;
+}
+
+.quantity span {
+    text-align: center;
+    font-style: italic;
+    color: red;
+    font-size: 20px;
+    margin: 5px 0px 0px 10px;
+    font-weight: normal;
+}
+
+.luuy p {
+    text-align: center;
+    font-style: italic;
+    color: #005baa;
+    font-size: 20px;
+    margin: 0px 0px 0px 20px;
+}
+
+.luuy p:hover {
+    color: #45aaf2;
+}
+
+.product-content-right-product-button button {
+    width: 150px;
+    height: 40px;
+    margin: 12px 0px 12px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #005baa;
+    border: 1px solid #005baa;
+    cursor: pointer;
+}
+
+.product-content-right-product-button p {
+    text-align: center;
+    justify-content: center;
+    margin-top: 8px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.product-content-right-product-button button:hover {
+    border: 2px solid #005baa;
+    background-color: #45aaf2;
+    color: #ffffff;
+}
+
+.product-content-right-product-icon {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.product-content-right-product-icon-item {
+    display: flex;
+    margin-right:  20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.product-content-right-product-icon-item i {
+    font-size: 20px;
+    margin-right: 6px;
+    margin-bottom: 7px;
+    color: #005baa;
+}
+
+.product-content-right-product-icon-item p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #005baa;
+}
+
+.product-content-right-product-icon-item p::after {
+    content:"";
+    height: 2px;
+    width: 0;
+    background: #005baa;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.product-content-right-product-icon-item p:hover::after {
+    width: 0%;
+}
+
+.product-content-right-product-icon-item p:hover::after {
+    width: 100%;
+}
+
+.product-content-right-product-qr img {
+    width: 143px;
+    height: 143px;
+}
+
+.product-content-right-bottom {
+    padding-top: 50px;
+    /* padding-right: 50px; */
+    border-top: 2px solid #005baa;
+    position: relative;
+    /* background-color: #c4302b; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.product-content-right-bottom-top {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #005baa;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -15px;
+    left: 50%;
+    border-radius: 50%;
+    color: #005baa;
+    font-weight: bold;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.product-content-right-bottom-content-title {
+    border-bottom: 2px solid #005baa;
+    /* background-color: #fcaf45; */
+    max-width: 100%;
+    margin-top: -33px;
+    /* padding-right: 50px; */
+    text-align: center;
+}
+
+.product-content-right-bottom-content-title-item {
+    padding-top: 6px;
+    cursor: pointer;
+}
+
+.product-content-right-bottom-content-title-item p {
+    font-size: 20px;
+    color: #005baa;
+    font-weight: bold;
+    /* background-color: red; */
+}
+
+.product-content-right-bottom-content {
+    padding-top: 30px;
+}
+
+.product-content-right-bottom-content p {
+    font-size: 20px;
+}
+
+.active {
+    display: none;
+}
+
+/*-------------------------------------------------SAN PHAM-------------------------------------------------*/
+
+/*-------------------------------------------------SAN PHAM LIEN QUAN-------------------------------------------------*/
+
+.product-related {
+    margin: 0px 50px 50px 50px;
+    /* background-color: #c4302b; */
+    border-top: 2px solid #005baa;
+}
+
+.product-related-title {
+    margin: 10px 0;
+    /* background-color: aqua; */
+}
+
+.product-related-title p {
+    font-size: 20px;
+    color: #005baa;
+    font-weight: bold;
+}
+
+.product-related-content {
+    display: flex;
+    /* background-color: green; */
+}
+
+.product-related-content-item {
+    width: 25%;
+    text-align: center;
+    padding: 0px 6px;
+    /* background-color: #fcaf45; */
+}
+
+.product-related-content-item img{
+    width: 100%;
+    cursor: pointer;
+    border: 0px solid #45aaf2;
+}
+
+.product-related-content-item img:hover{
+   border: 2px solid #45aaf2;
+   border-radius: 50px;
+   transition: all 0.2s ease;
+}
+
+.product-related-content-item h1{
+    font-size: 20px;
+    color: #005baa;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.product-related-content-item h1:hover{
+    color: #45aaf2;
+    transition: all 0.3s ease;
+}
+
+.product-related-content-item p{
+    font-size: 20px;
+    color: #005baa;
+    margin-top: 6px;
+}
+
+/*-------------------------------------------------SAN PHAM LIEN QUAN-------------------------------------------------*/
+
+/*-------------------------------------------------GIO HANG-------------------------------------------------*/
+
+.cart {
+    padding: 0px 50px 50px 50px;
+}
+
+.cart-top-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    /* background-color: burlywood; */
+}
+
+.cart-top {
+    height: 2px;
+    width: 70%;
+    background-color: #005baa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.cart-top-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #005baa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.cart-top-item i {
+    color: #005baa;
+}
+
+.cart-top-cart {
+    background-color: #005baa;
+}
+
+.cart-top-cart i {
+    color: #ffffff;
+}
+
+.cart-content {
+    display: flex;
+}
+
+.cart-content-left {
+    flex: 2;
+    padding-right: 12px;
+}
+
+.cart-content-left table {
+    width: 100%;
+    text-align: center;
+}
+
+.cart-content-left table tr {
+    width: 500px;
+}
+
+.cart-content-left table th {
+    padding: 10px;
+    font-size: 18px;
+    color: #005baa;
+    border-collapse: collapse;
+    border-bottom: 2px solid #005baa;
+}
+
+.cart-content-left table p {
+    font-size: 15px;
+    color: #005baa;
+    margin: 0px 0px 0px 0px;
+}
+
+.cart-content-left table input {
+    width: 50px;
+    height: 30px;
+    border: 2px solid #005baa;
+    text-align: center;
+    border-radius: 10px;
+    outline: none;
+    color: #005baa;
+}
+
+.cart-content-left table span a {
+    font-size: 15px;
+    color: #005baa;
+    /* background-color: #005baa; */
+    display: block;
+    /* width: 50px; */
+    /* height: 50px; */
+    border: 2px solid #005baa;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.cart-content-left table span a:hover {
+    color: #ffffff;
+    background-color: #45aaf2;
+    border: 2px solid #45aaf2;
+}
+
+.cart-content-left table td {
+    padding: 20px 0px;
+    border-bottom: 2px solid #005baa;
+}
+
+.cart-content-left td:first-child img {
+    width: 150px;
+}
+
+.cart-content-right {
+    flex: 1;
+    padding-left: 12px;
+    border-left: 2px solid #005baa;
+}
+
+.cart-content-right table {
+    width: 100%;
+}
+
+.cart-content-right table th {
+    padding: 10px;
+    font-size: 18px;
+    color: #005baa;
+    border-collapse: collapse;
+    border-bottom: 2px solid #005baa;
+}
+
+/* .cart-content-right table td {
+    padding: 16px 0px;
+    font-size: 16px;
+} */
+
+.cart-content-right table td p {
+    padding: 10px 0px 0px 0px;
+    font-size: 16px;
+    color: #005baa;
+    margin: 0px 0px 0px 0px;
+}
+
+.cart-content-right tr:nth-child(4) td {
+    border-bottom: 2px solid #005baa;
+}
+
+.cart-content-right tr td:first-child p {
+    text-align: left;
+}
+
+.cart-content-right tr td:last-child p {
+    text-align: right;
+}
+
+.cart-content-right-text {
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.cart-content-right-text p {
+    font-size: 17px;
+    color: #005baa;
+    /* margin: 0px 0px 0px 0px; */
+}
+
+.cart-content-right-button {
+    text-align: center;
+    align-items: center;
+}
+
+.cart-content-right-button button {
+    padding: 0px 18px 0px;
+    height: 35px;
+    cursor: pointer;
+    font-weight: bold;background-color: #005baa;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+}
+
+.cart-content-right-button button:hover {
+    background-color: #45aaf2;
+    color: #ffffff;
+    border: 2px solid #005baa;
+    transition: all 0.3s ease;
+}
+
+/* .cart-content-right-dangnhap p {
+    font-size: 17px;
+    color: #005baa;
+    margin: 0px 0px 0px 0px;
+}
+
+.cart-content-right-dangnhap p:first-child {
+    font-size: 17px;
+    color: #005baa;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.cart-content-right-dangnhap p a {
+    color: #45aaf2;
+    font-size: 17px;
+} */
+
+/*-------------------------------------------------GIO HANG-------------------------------------------------*/
+
+/*-------------------------------------------------GIAO HANG-------------------------------------------------*/
+
+.delivery {
+    padding: 0px 50px 50px 50px;
+}
+
+.delivery-top-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    /* background-color: burlywood; */
+}
+
+.delivery-top {
+    height: 2px;
+    width: 70%;
+    background-color: #005baa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.delivery-top-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #005baa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.delivery-top-item i {
+    color: #005baa;
+}
+
+.delivery-top-address {
+    background-color: #005baa;
+}
+
+.delivery-top-address i {
+    color: #ffffff;
+}
+
+.delivery-content {
+    display: flex;
+}
+
+.delivery-content > form {
+    flex: 1;
+    padding-right: 12px;
+}
+
+.delivery-content-left > p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    color: #005baa;
+    margin: 0px;
+    padding: 10px;
+}
+
+.delivery-content-left label {
+    font-size: 17px;
+    display: block;
+    color: #005baa;
+    font-weight: bold;
+}
+
+.delivery-content-left-dangnhap {
+    margin-top: 12px;
+    display: flex;
+}
+
+.delivery-content-left-dangnhap i {
+    font-size: 18px;
+    margin: 6px 6px 0px 0px;
+    color: #005baa;
+}
+
+.delivery-content-left-dangnhap p {
+    font-size: 17px;
+    color: #005baa;
+    margin: 0px;
+}
+
+.delivery-content-left-khachle {
+    margin-top: 12px;
+    display: flex;
+}
+
+.delivery-content-left-khachle span {
+    font-size: 17px;
+    color: #005baa;
+}
+
+.delivery-content-left-khachle p {
+    font-size: 17px;
+    color: #005baa;
+    margin: 0px;
+}
+
+.delivery-content-left-khachle input {
+    margin: 8px 8px 0px 0px;
+}
+
+.delivery-content-left-dangky {
+    margin-top: 12px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.delivery-content-left-dangky span {
+    font-size: 17px;
+    color: #005baa;
+}
+
+.delivery-content-left-dangky p {
+    font-size: 17px;
+    color: #005baa;
+    margin: 0px;
+}
+
+.delivery-content-left-dangky input {
+    margin: 8px 8px 0px 0px;
+}
+
+.delivery-content-left-input-top-item {
+    width: 100%;
+}
+
+.delivery-content-left-input-top-item input {
+    border: 1px solid #005baa;
+    width: 100%;
+    height: 35px;
+    border-radius: 50px;
+    margin: 10px 0px;
+    outline: none;
+}
+
+.delivery-content-left-input-top-item input:hover {
+    border: 2px solid #45aaf2;
+    transition: all 0.3s ease;
+}
+
+.delivery-content-left-button {
+    display: flex;
+    justify-content: space-between;
+}
+.delivery-content-left-button a {
+    margin-top: 22px;
+}
+
+.delivery-content-left-button p {
+    display: inline-block;
+    font-size: 17px;
+    margin: 0;
+    font-weight: bold;
+    cursor: pointer;
+    color: #005baa;
+}
+
+.delivery-content-left-button span:hover {
+    color: #45aaf2;
+    transition: all 0.3s ease-in-out;
+}
+
+.delivery-content-left-button span {
+    font-size: 17px;
+}
+
+.delivery-content-left-button button {
+    text-align: center;
+    border-radius: 50px;
+    width: 250px;
+    height: 30px;
+    border: 2px solid #005baa;
+    background-color: #005baa;
+    margin-top: 12px;
+    outline: none;
+}
+
+.delivery-content-left-button > button > p {
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.delivery-content-left-button button:hover {
+    background-color: #45aaf2;
+    border: 2px solid #45aaf2;
+    transition: all 0.3s ease;
+}
+
+.delivery-content-right {
+    flex: 1;
+    padding-left: 12px;
+    border-left: 2px solid #005baa;
+}
+
+.delivery-content-right table {
+    width: 100%;
+}
+
+.delivery-content-right table th {
+    padding: 10px 0px;
+    font-size: 18px;
+    color: #005baa;
+    border-collapse: collapse;
+    border-bottom: 2px solid #005baa;
+}
+
+.delivery-content-right table th:first-child {
+    text-align: left;
+}
+
+.delivery-content-right table th:last-child {
+    text-align: right;
+}
+
+.delivery-content-right tr td {
+    padding: 10px 0px 0px 0px;
+    font-size: 16px;
+    color: #005baa;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+}
+
+.delivery-content-right table tr:nth-child(4) {
+    border-bottom: 2px solid #005baa;
+}
+
+.delivery-content-right table tr td:first-child {
+    text-align: left;
+}
+
+.delivery-content-right table tr td:last-child  {
+    text-align: right;
+}
+
+/*-------------------------------------------------GIAO HANG-------------------------------------------------*/
+
+/*-------------------------------------------------THANH TOAN-------------------------------------------------*/
+
+.payment {
+    padding: 0px 50px 50px 50px;
+}
+
+.payment-top-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    /* background-color: burlywood; */
+}
+
+.payment-top {
+    height: 2px;
+    width: 70%;
+    background-color: #005baa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.payment-top-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #005baa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.payment-top-item i {
+    color: #005baa;
+}
+
+.payment-top-payment {
+    background-color: #005baa;
+}
+
+.payment-top-payment i {
+    color: #ffffff;
+}
+
+.payment-content {
+    display: flex;
+}
+
+.payment-content-left {
+    flex: 1;
+}
+
+.payment-content-left-method-delivery > p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    color: #005baa;
+    margin: 0px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.payment-content-left-method-delivery-item {
+    display: flex;
+}
+
+.payment-content-left-method-delivery-item input {
+    font-size: 18px;
+    margin: 3px 6px 0px 0px;
+    color: #005baa;
+    cursor: pointer;
+}
+
+.payment-content-left-method-delivery-item label {
+    font-size: 17px;
+    color: #005baa;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.payment-content-left-method-delivery-item label:hover {
+    color: #45aaf2;
+}
+
+.payment-content-left-method-payment > p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    color: #005baa;
+    margin: 0px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.payment-content-left-method-payment > label {
+    text-align: left;
+    font-size: 17px;
+    color: #005baa;
+    margin: 0px;
+}
+
+.payment-content-left-method-payment-item {
+    display: flex;
+    /* margin: 10px 0px; */
+}
+
+.payment-content-left-method-payment-item input {
+    font-size: 18px;
+    margin: 3px 6px 0px 0px;
+    color: #005baa;
+    cursor: pointer;
+}
+
+.payment-content-left-method-payment-item label {
+    font-size: 17px;
+    color: #005baa;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.payment-content-left-method-payment-item label:hover {
+    color: #45aaf2;
+}
+
+.payment-content-left-method-payment-item-img img {
+    width:auto;
+    height: auto;
+}
+
+.payment-content-right {
+    flex: 1;
+    padding-left: 12px;
+    border-left: 2px solid #005baa;
+}
+
+.payment-content-right-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-content-right-button input {
+    border: 1px solid #005baa;
+    width: 94%;
+    height: 35px;
+    border-radius: 50px;
+    margin: 10px 0px;
+    outline: none;
+    color: #005baa;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 0px 15px;
+    cursor: pointer;
+}
+
+.payment-content-right-button input:hover {
+    border: 2px solid #45aaf2;
+    color: #45aaf2;
+}
+
+.payment-content-right-button button {
+    border: 1px solid #005baa;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    margin: 10px 0px;
+    outline: none;
+    color: #005baa;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.payment-content-right-button button:hover {
+    border: 2px solid #45aaf2;
+    color: #45aaf2;
+    transition: all 0.3s ease;
+}
+
+.payment-content-right-mnv select {
+    border: 1px solid #005baa;
+    width: 100%;
+    height: 35px;
+    border-radius: 50px;
+    margin: 10px 0px;
+    outline: none;
+    color: #005baa;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 0px 15px;
+    cursor: pointer;
+}
+
+.payment-content-right-mnv select:hover {
+    border: 2px solid #45aaf2;
+    color: #45aaf2;
+}
+
+.payment-content-right table {
+    width: 100%;
+}
+
+.payment-content-right table th {
+    padding: 10px 0px;
+    font-size: 18px;
+    color: #005baa;
+    border-collapse: collapse;
+    border-bottom: 2px solid #005baa;
+}
+
+.payment-content-right table th:first-child {
+    text-align: left;
+}
+
+.payment-content-right table th:last-child {
+    text-align: right;
+}
+
+.payment-content-right tr td {
+    padding: 10px 0px 0px 0px;
+    font-size: 16px;
+    color: #005baa;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+}
+
+.payment-content-right table tr:nth-child(4) {
+    border-bottom: 2px solid #005baa;
+}
+
+.payment-content-right table tr td:first-child {
+    text-align: left;
+}
+
+.payment-content-right table tr td:last-child  {
+    text-align: right;
+}
+
+.payment-content-bottom-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-content-bottom-button p {
+    display: inline-block;
+    font-size: 17px;
+    margin: 0;
+    font-weight: bold;
+    cursor: pointer;
+    color: #005baa;
+}
+
+.payment-content-bottom-button span:hover {
+    color: #45aaf2;
+    transition: all 0.3s ease-in-out;
+}
+
+.payment-content-bottom-button span {
+    font-size: 17px;
+}
+
+.payment-content-bottom-button button {
+    text-align: center;
+    border-radius: 50px;
+    width: 250px;
+    height: 30px;
+    border: 2px solid #005baa;
+    background-color: #005baa;
+    margin-top: 12px;
+    outline: none;
+}
+
+.payment-content-bottom-button > button > p {
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.payment-content-bottom-button button:hover {
+    background-color: #45aaf2;
+    border: 2px solid #45aaf2;
+    transition: all 0.3s ease;
+}
+/*-------------------------------------------------THANH TOAN-------------------------------------------------*/
+
+/*-------------------------------------------------THANK YOU-------------------------------------------------*/
+.thankyou .thankyou-content-top {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.thankyou .thankyou-content-top h2 {
+    color: #005baa;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.thankyou .thankyou-content-top p,
+.thankyou .thankyou-content-top img {
+    margin-bottom: 20px;
+}
+
+.thankyou .thankyou-content-bottom {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.thankyou .thankyou-content-bottom p {
+    margin-bottom: 20px;
+}
+
+.thankyou .thankyou-btn {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.thankyou .thankyou-btn button {
+    padding: 0px 18px 0px;
+    height: 35px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #005baa;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.thankyou .thankyou-btn button:hover {
+    background-color: #45aaf2;
+    border: 1px solid #005baa;
+}
+
+.thankyou .thankyou-btn button a {
+    color: #ffffff;
+}
+/*-------------------------------------------------THANK YOU-------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
